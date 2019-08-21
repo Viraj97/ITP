@@ -12,6 +12,8 @@ import { CustomerUpdateComponent } from './Pages/customer-update/customer-update
 import { CustomerDeleteComponent } from './Pages/customer-delete/customer-delete.component';
 import { UpdateBookingComponent } from './Pages/update-booking/update-booking.component';
 import { DeleteBookingComponent } from './Pages/delete-booking/delete-booking.component';
+import { VehicleComponent } from './Pages/Transport/vehicle/vehicle.component';
+import { AvailableComponent } from './Pages/Transport/available/available.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DeleteBookingComponent } from './Pages/delete-booking/delete-booking.co
     CustomerUpdateComponent,
     CustomerDeleteComponent,
     UpdateBookingComponent,
-    DeleteBookingComponent
+    DeleteBookingComponent,
+    VehicleComponent,
+    AvailableComponent
   ],
   imports: [
     BrowserModule,
