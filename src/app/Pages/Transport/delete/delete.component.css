@@ -6,7 +6,7 @@
         
     }
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 550px;}
+    .row.content {height: 50px;}
         
     /* Set gray background color and 100% height */
     .sidenav {
@@ -29,3 +29,41 @@
       }
       .row.content {height: auto;} 
     }
+
+
+    /* search bar */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

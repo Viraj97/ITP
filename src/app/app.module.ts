@@ -14,6 +14,9 @@ import { UpdateBookingComponent } from './Pages/update-booking/update-booking.co
 import { DeleteBookingComponent } from './Pages/delete-booking/delete-booking.component';
 import { VehicleComponent } from './Pages/Transport/vehicle/vehicle.component';
 import { AvailableComponent } from './Pages/Transport/available/available.component';
+import { UpdateComponent } from './Pages/Transport/update/update.component';
+import { DeleteComponent } from './Pages/Transport/delete/delete.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { AvailableComponent } from './Pages/Transport/available/available.compon
     UpdateBookingComponent,
     DeleteBookingComponent,
     VehicleComponent,
-    AvailableComponent
+    AvailableComponent,
+    UpdateComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
