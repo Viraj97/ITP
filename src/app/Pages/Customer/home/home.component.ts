@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NewCustomer } from '../../Models/new-customer';
+import { NewCustomer } from '../../../Models/new-customer';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
