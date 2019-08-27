@@ -16,6 +16,7 @@ import { VehicleComponent } from './Pages/Transport/vehicle/vehicle.component';
 import { AvailableComponent } from './Pages/Transport/available/available.component';
 import { UpdateComponent } from './Pages/Transport/update/update.component';
 import { DeleteComponent } from './Pages/Transport/delete/delete.component';
+import { TransportSidebarComponent } from './Components/Transport-sidebar/transport-sidebar/transport-sidebar.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DeleteComponent } from './Pages/Transport/delete/delete.component';
     VehicleComponent,
     AvailableComponent,
     UpdateComponent,
-    DeleteComponent
+    DeleteComponent,
+    TransportSidebarComponent
   ],
   imports: [
     BrowserModule,
