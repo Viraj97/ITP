@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+declare const validate:any;
+
+
+
 @Component({
   selector: 'app-vehicle',
   templateUrl: './vehicle.component.html',
@@ -11,5 +15,7 @@ export class VehicleComponent implements OnInit {
 
   ngOnInit() {
   }
-
+onclick(){
+  validate();
+}
 }

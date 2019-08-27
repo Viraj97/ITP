@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare const validate:any;
 
 @Component({
   selector: 'app-update',
@@ -12,4 +13,8 @@ export class UpdateComponent implements OnInit {
   ngOnInit() {
   }
 
+  onclick(){
+    validate();
+  }
+  
 }

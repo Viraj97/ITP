@@ -13,7 +13,7 @@ const routes: Routes = [
 {path: 'available', component:AvailableComponent}
 
 ];
-
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
