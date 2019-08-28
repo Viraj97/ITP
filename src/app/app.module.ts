@@ -17,6 +17,7 @@ import { AvailableComponent } from './Pages/Transport/available/available.compon
 import { UpdateComponent } from './Pages/Transport/update/update.component';
 import { DeleteComponent } from './Pages/Transport/delete/delete.component';
 import { TransportSidebarComponent } from './Components/Transport-sidebar/transport-sidebar/transport-sidebar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { TransportSidebarComponent } from './Components/Transport-sidebar/transp
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

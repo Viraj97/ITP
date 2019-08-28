@@ -9,32 +9,32 @@ function validate(){
 		
 		if(id.value == '')
 		{
-			alert('Please enter vehicle ID');
+			alert('Please Enter Vehicle ID');
 			return false;
 		}
 		if(model.value == '')
 		{
-			alert('Please enter vehicle model');
+			alert('Please Enter Vehicle Model');
 			return false;
 		}
 		if(license.value == '')
 		{
-			alert('Please enter license no');
+			alert('Please Enter License No');
 			return false;
 		}
 		if(passengers.value == '')
 		{
-			alert('Please enter no of passengers');
+			alert('Please Enter No Of Passengers');
 			return false;
 		}
 		if(year.value == '')
 		{
-			alert('Please enter manufactured year');
+			alert('Please Enter Manufactured Year');
 			return false;
 		}
 		if(colour.value == '')
 		{
-			alert('Please enter vehicle colour');
+			alert('Please Enter Vehicle Colour');
 			return false;
 		}
 	
