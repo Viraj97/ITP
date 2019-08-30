@@ -26,7 +26,13 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/manage-emp-js/manage-emp.js",
+              "src/assets/update-emp-js/update-emp.js",
+              "src/assets/delete-emp-js/delete-emp.js",
+              "src/assets/Attendance-emp-js/Attendance-emp.js",
+              "src/assets/Work-emp-js/Work-emp.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -91,7 +97,13 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/manage-emp-js/manage-emp.js",
+              "src/assets/update-emp-js/update-emp.js",
+              "src/assets/delete-emp-js/delete-emp.js",
+              "src/assets/Attendance-emp-js/Attendance-emp.js",
+              "src/assets/Work-emp-js/Work-emp.js"
+            ]
           }
         },
         "lint": {
