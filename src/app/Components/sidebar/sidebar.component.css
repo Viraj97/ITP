@@ -1,7 +1,16 @@
-.sidebar{
-    height: 1000px;
-    width: 100px;
-    position: relative;
-    padding-left: 0%;
-    background-color: black;
+.col-sm-3{
+    background-color: #b39ddb;
+    height: 550px;
+    
+}
+
+h3{
+    font-family: fantasy;
+}
+.nav-pills{
+    font-family: fantasy;
+    font-size: 18px; 
+}
+li{
+    height: 60px;
 }

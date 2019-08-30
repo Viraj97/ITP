@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { userInfo } from 'os';
+// import { userInfo } from 'os';
 
 @Component({
   selector: 'app-login',
@@ -12,8 +12,8 @@ export class LoginComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   model = {
-    uName: 'AM001',
-    pw: 'Abc123',
+    uName: '',
+    pw: '',
   };
 
   ngOnInit() {

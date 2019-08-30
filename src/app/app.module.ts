@@ -15,6 +15,11 @@ import { UpdateBookingComponent } from './Pages/customer/update-booking/update-b
 import { DeleteBookingComponent } from './Pages/customer/delete-booking/delete-booking.component';
 import { HeaderComponent } from './Components/header/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { ManageEmpDetailsComponent } from './Pages/Employee/Admin/manage-emp-details/manage-emp-details.component';
+import { UpdateEmpDetailsComponent } from './Pages/Employee/Admin/update-emp-details/update-emp-details.component';
+import { DeleteEmpDetailsComponent } from './Pages/Employee/Admin/delete-emp-details/delete-emp-details.component';
+import { WorkEmpDetailsComponent } from './Pages/Employee/Admin/work-emp-details/work-emp-details.component';
+import { AttendanceEmpDetailsComponent } from './Pages/Employee/Admin/attendance-emp-details/attendance-emp-details.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +34,11 @@ import { FooterComponent } from './Components/footer/footer.component';
     DeleteBookingComponent,
     HeaderComponent,
     FooterComponent,
+    ManageEmpDetailsComponent,
+    UpdateEmpDetailsComponent,
+    DeleteEmpDetailsComponent,
+    WorkEmpDetailsComponent,
+    AttendanceEmpDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,13 +6,13 @@
 			</div>
 
 			<div class="container">
-				<label for="uname"><b>Username</b></label>
-				<input type="text" placeholder="Enter Username" required [(ngModel)]="model.uName" name="Username">
-
-				<label for="psw"><b>Password</b></label>
-				<input type="password" placeholder="Enter Password" [(ngModel)]="model.pw" name="password">
-
-				<button type="submit" (click)="method1()">Login</button>
+				<label for="uname"><b>Username</b></label><br>
+				<input type="text" placeholder="Enter Username" required [(ngModel)]="model.uName" name="Username" required>
+<br>
+				<label for="psw"><b>Password</b></label><br>
+				<input type="password" placeholder="Enter Password" [(ngModel)]="model.pw" name="password" required>
+<br>
+				<button type="submit" (click)="method1()" routerLink="/home">Login</button>
 			</div>
 		</form>
 	</div>

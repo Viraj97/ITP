@@ -3,6 +3,7 @@
 .container{
     width: 80%;
     height: max-content;
+    background-color: #e0e0e0;
         
     }
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */

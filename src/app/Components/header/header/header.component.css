@@ -1,5 +1,10 @@
 Header {
-    background-color: #555;
-    color: white;
-    padding: 15px;
+    background-color: #673ab7;
+    color: black;
+    padding: 25px;
   }
+h1{
+  font-family: 'Marck Script', cursive;
+  color: white;
+  font-size: 60px;
+}
