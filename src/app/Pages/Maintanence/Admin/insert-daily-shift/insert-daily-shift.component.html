@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>  
+                <div class="container">
+                    
+                    <h1>Dailyshift Insert Center</h1>
+                        <form #insertdailyshift=ngForm>
+                    
+                                <label for='name'>Employee Id:</label>
+                                <input type="text" class="form-control" id="NIC"
+                                required
+                                [(ngModel)]="model.NIC" name="nic">
+                    
+                                <label for='name'>Time:</label>
+                                <input type="time" class="form-control" id="time"
+                                required
+                                [(ngModel)]="model.time" name="time">
+
+                                <label for='name'>Date:</label>
+                                <input type="date" class="form-control" id="date"
+                                required
+                                [(ngModel)]="model.date" name="date">
+
+                                <label for='name'>Section:</label>
+                                <input type="text" class="form-control" id="section"
+                                required
+                                [(ngModel)]="model.section" name="section">
+
+                                <label for='name'>Position:</label>
+                                <input type="text" class="form-control" id="position"
+                                required
+                                [(ngModel)]="model.position" name="position">
+
+                                <br>
+                            <button type="submit" class="btn btn-success" (click)="method()">Submit</button>
+                    
+                        </form>
+                    </div>
+
+
+    
