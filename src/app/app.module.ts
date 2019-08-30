@@ -20,6 +20,12 @@ import { UpdateEmpDetailsComponent } from './Pages/Employee/Admin/update-emp-det
 import { DeleteEmpDetailsComponent } from './Pages/Employee/Admin/delete-emp-details/delete-emp-details.component';
 import { WorkEmpDetailsComponent } from './Pages/Employee/Admin/work-emp-details/work-emp-details.component';
 import { AttendanceEmpDetailsComponent } from './Pages/Employee/Admin/attendance-emp-details/attendance-emp-details.component';
+import { InsertDailyShiftComponent } from './Pages/Maintanence/Admin/insert-daily-shift/insert-daily-shift.component';
+import { InsertEquipmentComponent } from './Pages/Maintanence/Admin/insert-equipment/insert-equipment.component';
+import { UpdateDailyShiftComponent } from './Pages/Maintanence/Admin/update-daily-shift/update-daily-shift.component';
+import { DeleteDailyShiftComponent } from './Pages/Maintanence/Admin/delete-daily-shift/delete-daily-shift.component';
+import { DeleteEquipmentComponent } from './Pages/Maintanence/Admin/delete-equipment/delete-equipment.component';
+import { EquipmentUpdateCenterComponent } from './Pages/Maintanence/Admin/equipment-update-center/equipment-update-center.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +45,12 @@ import { AttendanceEmpDetailsComponent } from './Pages/Employee/Admin/attendance
     DeleteEmpDetailsComponent,
     WorkEmpDetailsComponent,
     AttendanceEmpDetailsComponent,
+    InsertDailyShiftComponent,
+    InsertEquipmentComponent,
+    UpdateDailyShiftComponent,
+    DeleteDailyShiftComponent,
+    DeleteEquipmentComponent,
+    EquipmentUpdateCenterComponent,
   ],
   imports: [
     BrowserModule,
