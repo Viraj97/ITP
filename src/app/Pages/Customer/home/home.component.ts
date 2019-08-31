@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -25,8 +24,10 @@ export class HomeComponent {
 
   method1() {
     this.http.get('http://127.0.0.1:3000/newcustomer', {
-      params: { NIC: this.model.NIC, name: this.model.name, email: this.model.email,
-        telephone: this.model.telephone, address: this.model.address }
+      params: {
+        NIC: this.model.NIC, name: this.model.name, email: this.model.email,
+        telephone: this.model.telephone, address: this.model.address
+      }
     }).subscribe((response) => {
       console.log('response here', response[0].newcustomer);
     });
