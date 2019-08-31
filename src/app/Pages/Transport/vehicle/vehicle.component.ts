@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+declare const validate:any;
 @Component({
   selector: 'app-vehicle',
   templateUrl: './vehicle.component.html',
@@ -19,6 +20,7 @@ export class VehicleComponent{
 
   };
 
+  
   submitted = false;
   
   onSubmit() {this.submitted = true;}
@@ -32,4 +34,7 @@ method1(){
   });
 }
 
+onclick(){
+  validate();
+}
 }
