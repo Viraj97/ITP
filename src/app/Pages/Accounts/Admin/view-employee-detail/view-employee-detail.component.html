@@ -1,0 +1,34 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+                <div class="container">
+                    <h1>View Employee Financial Details</h1>
+
+                    <br>
+                    <form #viewEmployeeDetails=ngForm>
+    
+                        <label for='eid'>Employee ID</label>
+                        <input type="text" class="form-control" id="eid" required [(ngModel)]="model.eid" name="eid">
+    
+                        
+    
+    
+                    </form>
+                    <br>
+                    <button type="submit" class="btn btn-success" (click)="method()">Submit</button>
+                </div>
+            </div>
+        
+    </div>
+
+
+
+</div>
+
+<footer class="container-fluid">
+    <p>Footer Text</p>
+</footer>
