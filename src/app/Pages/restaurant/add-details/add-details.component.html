@@ -1,0 +1,40 @@
+
+<app-res-side-bar></app-res-side-bar>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                <h1>Add New Stock</h1>
+                <br><br>
+                <form #newstock=ngForm >
+                    <label for='pid'>Product Id</label>
+                    <input type="text"  class="form-control" id="pid" required [(ngModel)]="model.pid" name="pid">
+                    <br>
+                    <label for='pname'>Product Name</label>
+                    <input type="text" class="form-control" id="pname" required [(ngModel)]="model.pname"
+                        name="pname">
+                        <br>
+                    <label for='quantity'>Quantity</label>
+                    <input type="text" class="form-control" id="quantity" required [(ngModel)]="model.quantity" name="quantity">
+                    <br>
+                    <label for='price'>Price</label>
+                    <input type="text" class="form-control" id="price" required [(ngModel)]="model.price"
+                        name="price">
+                        <br>
+                    <div class="form-group">
+                        <label for="ava">Available</label>
+                        <select class="form-control" id="ava"  (change)="handleAvailableChange($event)">
+                            <option value="1" selected>Available</option>
+                            <option value="0" >Not Available</option>
+                        </select>
+                    </div>
+                    <br><br>
+                    <button type="submit" class="btn btn-success" (click)="method1()">ADD</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

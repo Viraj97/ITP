@@ -1,0 +1,51 @@
+<app-res-side-bar></app-res-side-bar>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                <h1>Update details</h1>
+                <br><br>
+
+                <div class="active-cyan-3 active-cyan-4 mb-4 search-bar">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Search"
+                      aria-label="Search"/>
+
+                  </div>
+                  <br>
+                  <button type="search" class="btn btn-success">Search</button>
+                  <br><br><br><br>
+
+                <form #newstock=ngForm>
+                    <label for='name'>Product Id</label>
+                    <input type="text" class="form-control">
+                    <br>
+                    <label for='name'>Product Name</label>
+                    <input type="text" class="form-control">
+                        <br>
+                    <label for='name'>Quantity</label>
+                    <input type="text" class="form-control">
+                    <br>
+                    <label for='name'>Price</label>
+                    <input type="text" class="form-control">
+                        <br>
+                    <div class="form-group">
+                        <label for="ava">Available</label>
+                        <select class="form-control">
+                            <option value="1" selected>Available</option>
+                            <option value="0" >Not Available</option>
+                        </select>
+                    </div>
+                    <br><br>
+                    <button type="submit" class="btn btn-success">Update</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
