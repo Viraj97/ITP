@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 
-// declare const validate:any;
+declare const validate:any;
 
 @Component({
   selector: 'app-update',
@@ -41,7 +41,7 @@ method3(){
 }
   
 onclick(){
-    validate();
+  validate();
   }
 
 
