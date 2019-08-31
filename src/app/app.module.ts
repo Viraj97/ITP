@@ -14,6 +14,15 @@ import { UpdateBookingComponent } from './Pages/customer/update-booking/update-b
 import { DeleteBookingComponent } from './Pages/customer/delete-booking/delete-booking.component';
 import { HeaderComponent } from './Components/header/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { StockDetailsComponent } from './Pages/Inventory/stock-details/stock-details.component';
+import { SuplierDetailsComponent } from './Pages/Inventory/suplier-details/suplier-details.component';
+import { InventroySideBarComponent } from './Components/sidebar/inventory-sidebar/inventroy-side-bar/inventroy-side-bar.component';
+import { UpdateStockDetailsComponent } from './Pages/Inventory/update-stock-details/update-stock-details.component';
+import { DeleteStockDetailsComponent } from './Pages/Inventory/delete-stock-details/delete-stock-details.component';
+import { UpdateSupplierDetailsComponent } from './Pages/Inventory/update-supplier-details/update-supplier-details.component';
+import { DeleteSupplierDetailsComponent } from './Pages/Inventory/delete-supplier-details/delete-supplier-details.component';
+import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,12 +36,23 @@ import { FooterComponent } from './Components/footer/footer.component';
     UpdateBookingComponent,
     DeleteBookingComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    StockDetailsComponent,
+    SuplierDetailsComponent,
+    InventroySideBarComponent,
+    UpdateStockDetailsComponent,
+    DeleteStockDetailsComponent,
+    UpdateSupplierDetailsComponent,
+    DeleteSupplierDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+    
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
