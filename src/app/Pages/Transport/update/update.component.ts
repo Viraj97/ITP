@@ -25,10 +25,7 @@ export class UpdateComponent implements OnInit {
   ngOnInit() {
   }
 
-  // onclick(){
-  //   validate();
-  // }
-
+  
   submitted = false;
   
   onSubmit() {this.submitted = true;}
@@ -43,4 +40,9 @@ method3(){
   });
 }
   
+onclick(){
+    validate();
+  }
+
+
 }
