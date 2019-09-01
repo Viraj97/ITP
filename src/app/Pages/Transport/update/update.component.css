@@ -1,31 +1,35 @@
 
+    
 /* @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css'); */
 .container{
+   width: 1000px;
+  height:550px;
+  background-color: white;
+  margin-top: 50px;
+  border-radius: 1%;   
+  }
+  
+  .col-sm-9{
+    background-color: #212121;
+    width: 85%; 
+    height: 100%;
+     
+  }
+  h1{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+  }
+  form{
     width: 80%;
-    height: max-content;
-        
-    }
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 550px;}
-        
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;} 
-    }
+    margin-left: 100px;
+  }
+  .head{
+    font-size: 24px;
+  }
+  .form-panel{
+    width: 80%;
+  
+  }
