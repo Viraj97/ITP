@@ -18,6 +18,7 @@ import { UpdateComponent } from './Pages/Transport/update/update.component';
 import { DeleteComponent } from './Pages/Transport/delete/delete.component';
 import { TransportSidebarComponent } from './Components/Transport-sidebar/transport-sidebar/transport-sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './Components/header/header.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     AvailableComponent,
     UpdateComponent,
     DeleteComponent,
-    TransportSidebarComponent
+    TransportSidebarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
