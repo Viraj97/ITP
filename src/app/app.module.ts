@@ -23,6 +23,7 @@ import { DeleteDetailsComponent } from './Pages/restaurant/delete-details/delete
 import { TableBookingComponent } from './Pages/restaurant/table-booking/table-booking.component';
 import { UpdateDetailsComponent } from './Pages/restaurant/update-details/update-details.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

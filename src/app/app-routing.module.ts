@@ -24,7 +24,8 @@ const routes: Routes = [
   {path: 'stockdetails',component: StockDetailsComponent},
   {path: 'deletedetails',component:DeleteDetailsComponent},
   {path: 'tablebooking',component:TableBookingComponent},
-  {path: 'updatedetails',component:UpdateDetailsComponent}
+  {path: 'updatedetails',component:UpdateDetailsComponent},
+
 ];
 
 @NgModule({

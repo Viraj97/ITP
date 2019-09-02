@@ -9,6 +9,8 @@ import { from } from 'rxjs';
   styleUrls: ['./add-details.component.css']
 })
 export class AddDetailsComponent{
+  // model: any = {};
+
 
   constructor(private http: HttpClient) { }
 
@@ -22,7 +24,11 @@ export class AddDetailsComponent{
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; }
+  onSubmit() {
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.model))
+    this.submitted = true;
+    this.method1();
+  }
 
   method1(){
     this.http.get('http://127.0.0.1:3000/addstockdetails',{
