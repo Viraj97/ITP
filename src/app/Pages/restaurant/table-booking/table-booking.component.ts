@@ -27,11 +27,11 @@ export class TableBookingComponent  {
   }
 
   method1(){
-    this.http.get('http://127.0.0.1:3000/addstockdetails',{
+    this.http.get('http://127.0.0.1:3000/tablebooking',{
       params: { tn: this.model.tn, nc: this.model.nc,bd: this.model.bd,
         price: this.model.price,ava: this.model.ava}
     }).subscribe((response) => {
-      console.log('response here',response[0].addstockdetails);
+      console.log('response here',response[0].tablebooking);
     });
   }
 

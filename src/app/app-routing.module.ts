@@ -10,6 +10,7 @@ import { StockDetailsComponent} from './Pages/restaurant/stock-details/stock-det
 import{DeleteDetailsComponent} from './Pages/restaurant/delete-details/delete-details.component';
 import{TableBookingComponent} from './Pages/restaurant/table-booking/table-booking.component';
 import{UpdateDetailsComponent} from './Pages/restaurant/update-details/update-details.component';
+import{TableBookingDeleteComponent} from './Pages/restaurant/table-booking-delete/table-booking-delete.component';
 import { from } from 'rxjs';
 
 // tslint:disable-next-line:one-variable-per-declaration
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'deletedetails',component:DeleteDetailsComponent},
   {path: 'tablebooking',component:TableBookingComponent},
   {path: 'updatedetails',component:UpdateDetailsComponent},
+  {path: 'tablebookingdelete',component:TableBookingDeleteComponent},
 
 ];
 

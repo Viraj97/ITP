@@ -11,7 +11,7 @@ export class DeleteDetailsComponent {
 
   model = {
     pid: '',
-   
+
   };
 
   submitted = false;
@@ -26,6 +26,6 @@ export class DeleteDetailsComponent {
     });
   }
 
-  
+
 }
 

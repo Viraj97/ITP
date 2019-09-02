@@ -22,6 +22,7 @@ import { StockDetailsComponent } from './Pages/restaurant/stock-details/stock-de
 import { DeleteDetailsComponent } from './Pages/restaurant/delete-details/delete-details.component';
 import { TableBookingComponent } from './Pages/restaurant/table-booking/table-booking.component';
 import { UpdateDetailsComponent } from './Pages/restaurant/update-details/update-details.component';
+import { TableBookingDeleteComponent } from './Pages/restaurant/table-booking-delete/table-booking-delete.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { UpdateDetailsComponent } from './Pages/restaurant/update-details/update
     StockDetailsComponent,
     DeleteDetailsComponent,
     TableBookingComponent,
-    UpdateDetailsComponent
+    UpdateDetailsComponent,
+    TableBookingDeleteComponent
   ],
   imports: [
     BrowserModule,

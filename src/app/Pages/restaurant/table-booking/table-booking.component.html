@@ -7,7 +7,7 @@
         <div class="col-sm-9">
             <div class="container">
                 <h1>Table Booking</h1>
-
+                <br>
                 <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
 
                     <div class="form-group">
@@ -28,7 +28,7 @@
 
                     <div class="form-group">
                     <label for='bd'>Booking Date</label>
-                    <input type="text" class="form-control" id="bd" #bd="ngModel" required [(ngModel)]="model.bd" name="bd" [ngClass]="{ 'is-invalid': f.submitted && bd.invalid }" >
+                    <input type="Date" class="form-control" id="bd" #bd="ngModel" required [(ngModel)]="model.bd" name="bd" [ngClass]="{ 'is-invalid': f.submitted && bd.invalid }" >
                     <div *ngIf="f.submitted ||bd.touched && bd.invalid" class="invalid-feedback">
                         <div *ngIf="bd.invalid">Booking Date is required</div>
                       </div>
@@ -43,37 +43,35 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="ava">Available</label>
+                        <label for="ava">Available/Not Available</label>
                         <select class="form-control" id="ava"  (change)="handleAvailableChange($event)">
                             <option value="1" selected>Available</option>
                             <option value="0" >Not Available</option>
                         </select>
                     </div>
                     <button  type="submit" class="btn btn-success"  >ADD</button>
-                </form>
+                      <br><br><br>
+                      <h1>Checking Availability</h1>
 
-                <div class="container">
-                    <h1>Checking Availability</h1>
+                          <table class="table table-trapped">
+                            <thead>
+                              <tr>
+                                <th>Table Number</th>
+                                <th>Number of Chairs</th>
+                                <th>Booking Date</th>
+                                <th>Price</th>
+                                <th>Available/Not Available</th>
+                                 <th></th>
+                              </tr>
+                            </thead>
 
-                    <div class="container">
-                        <table class="table table-trapped">
-                          <thead>
-                            <tr>
-                              <th>Table Number</th>
-                              <th>Number of Chairs</th>
-                              <th>Booking Date</th>
-                              <th>Price</th>
-                              <th>Available/Not Available</th>
-                               <th></th>
-                            </tr>
-                          </thead>
+                            <tbody>
 
-                          <tbody>
+                            </tbody>
+                          </table>
+                          </form>
 
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
+
             </div>
         </div>
     </div>
