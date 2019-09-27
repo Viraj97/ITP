@@ -1,5 +1,6 @@
 function validate(){
-    var id = document.getElementById('id');
+	var id = document.getElementById('id');
+	var vehicle = document.getElementById('vehicle');
 	var model = document.getElementById('model');
 	var license = document.getElementById('license');
 	var passengers = document.getElementById('passengers');
@@ -10,6 +11,11 @@ function validate(){
 		if(id.value == '')
 		{
 			alert('Please Enter Vehicle ID');
+			return false;
+		}
+		if(id.value == '')
+		{
+			alert('Please Enter Vehicle');
 			return false;
 		}
 		if(model.value == '')

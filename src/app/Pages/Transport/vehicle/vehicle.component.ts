@@ -12,6 +12,7 @@ export class VehicleComponent{
 
   model = {
     id: '',
+    vehicle: '',
     model: '',
     license: '',
     passengers: '',
@@ -27,7 +28,7 @@ export class VehicleComponent{
 
 method1(){
   this.http.get('http://127.0.0.1:3000/AddVehicle',{
-    params: {VehicleID:this.model.id,VehicleModel:this.model.model,Licence:this.model.license,Max:this.model.passengers,
+    params: {VehicleID:this.model.id,Vehicle:this.model.vehicle,VehicleModel:this.model.model,Licence:this.model.license,Max:this.model.passengers,
       Year:this.model.year,Colour:this.model.colour}
   }).subscribe((response)=>{
     console.log('response',response[0].AddVehicle);
