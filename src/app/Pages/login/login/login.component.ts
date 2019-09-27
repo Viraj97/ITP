@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { userInfo } from 'os';
+import { Router } from "@angular/router"
 
 @Component({
   selector: 'app-login',
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   model = {
     uName: '',
@@ -31,7 +31,31 @@ export class LoginComponent implements OnInit {
       params: { user_id: this.model.uName, pw: this.model.pw }
     }).subscribe((response) => {
       console.log('response here', response[0].login);
+      if (response[0].login) {
+        this.router.navigate(['/' + this.getRouterLinkForWorkingUnit(response[0].performingUnit)]);
+      }
     });
+  }
+
+  getRouterLinkForWorkingUnit(workingUnit) {
+    switch (workingUnit) {
+      case 'acc':
+        return 'viewempdetails';
+      case 'cus':
+        return 'home';
+      case 'emp':
+        return 'manage-emp';
+      case 'mam':
+        return 'insert';
+      case 'trn':
+        return 'vehicle';
+      case 'inv':
+        return 'stock';
+      case 'res':
+        return 'adddetails';
+      default:
+        return '';
+    }
   }
 
 }

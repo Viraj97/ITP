@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-accounts-sidebar></app-accounts-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+
+        <div class="col-sm-9">
+            <div class="container">
+                <h1>Update Employee Financial Details</h1>
+
+                <br>
+                <form #newEmployee=ngForm>
+
+                    <label for='eid'>Employee ID</label>
+                    <input type="text" class="form-control" id="eid" required [(ngModel)]="model.eid" name="eid">
+
+                    <br>
+
+                    <label for='salary'>Salary</label>
+                    <input type="text" class="form-control" id="salary" required [(ngModel)]="model.salary"
+                        name="salary">
+
+                    <br>
+                        
+                    <label for='bonus'>Bonus</label>
+                    <input type="text" class="form-control" id="bonus" required [(ngModel)]="model.bonus" name="bonus">
+    
+                    <br>
+
+                    <label for='loan'>Loan</label>
+                    <input type="text" class="form-control" id="loan" required [(ngModel)]="model.loan" name="loan">
+
+                    <br>
+
+                </form>
+
+                <br>
+                    <button type="submit" class="btn btn-success">Submit</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

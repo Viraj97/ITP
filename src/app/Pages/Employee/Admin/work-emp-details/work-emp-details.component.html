@@ -2,35 +2,38 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-employee-sidebar></app-employee-sidebar>
+<app-header></app-header>
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-9">
             <div class="container">
-                <h1>Working Details</h1>
+                
                 <form #newCustomer=ngForm style="width: 800px">
+                    <h1>Working Details</h1>
                     <label for='name'>Employee ID</label>
-                    <input type="text" class="form-control" id="WId" required [(ngModel)]="model.name" name="Wid">
+                    <input type="text" class="form-control" id="WId" required [(ngModel)]="model.wId" name="Wid">
 
                     <label for='name'>Date</label>
-                    <input type="date" class="form-control" id="WDate" required [(ngModel)]="model.address"
+                    <input type="date" class="form-control" id="WDate" required [(ngModel)]="model.wDate"
                         name="Wdate">
 
                     <label for='name'>Working Time</label>
-                    <input type="text" class="form-control" id="WTime" required [(ngModel)]="model.NIC" name="Wtime">
+                    <input type="text" class="form-control" id="WTime" required [(ngModel)]="model.wTime" name="Wtime">
 
                     <label for='name'>Working Time Status</label>
                     <p>
-                        <input class="w3-radio" type="radio" name="WStatus" id="Ftime" value="marry" >
+                        <input class="w3-radio" type="radio" required [(ngModel)]="model.wTimeStatus" name="wtimeStatus" id="Ftime" value="Full Time" >
                         <label>Full Time</label></p>
                         <p>
-                        <input class="w3-radio" type="radio" name="WStatus" id="Htime" value="Unmarry">
+                        <input class="w3-radio" type="radio" required [(ngModel)]="model.wTimeStatus" name="wtimeStatus" id="Htime" value="Half Time">
                         <label>Half Time</label></p>
                         <p>
-                        <input class="w3-radio" type="radio" name="WStatus" id="Otime" value="Unmarry">
+                        <input class="w3-radio" type="radio" required [(ngModel)]="model.wTimeStatus" name="wtimeStatus" id="Otime" value="Over Time">
                         <label>Over Time</label></p>
                         <p>   
                     <br>
-                    <button (click) = "onClickWork()" type="submit" class="btn btn-success">Add</button>
+                    <button (click) = "method5()" (click) = "onClickWork()" type="submit" class="btn btn-success">Add</button>
 
                 </form>
             </div>

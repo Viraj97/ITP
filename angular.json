@@ -26,7 +26,29 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/validation/validate.js",
+              "src/assets/validation/delete.js",
+              "src/assets/manage-emp-js/manage-emp.js",
+              "src/assets/update-emp-js/update-emp.js",
+              "src/assets/delete-emp-js/delete-emp.js",
+              "src/assets/Attendance-emp-js/Attendance-emp.js",
+              "src/assets/Work-emp-js/Work-emp.js",
+              "src/assets/dailyshift/insertdailyshift.js",
+              "src/assets/dailyshift/updatedailyshift.js",
+              "src/assets/dailyshift/deletedailyshift.js",
+              "src/assets/dailyshift/insertequipment.js",
+              "src/assets/dailyshift/updateequipment.js",
+              "src/assets/dailyshift/deleteequipment.js",
+              "src/assets/Inventory/addstockdetails.js",
+              "src/assets/Inventory/deletestockdetails.js",
+              "src/assets/AccountsValidation/addEmpFDetails.js",
+              "src/assets/AccountsValidation/deleteEmpDetails.js"
+
+
+
+
+            ]
           },
           "configurations": {
             "production": {
@@ -91,7 +113,28 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/validation/validate.js",
+              "src/assets/validation/delete.js",
+              "src/assets/manage-emp-js/manage-emp.js",
+              "src/assets/update-emp-js/update-emp.js",
+              "src/assets/delete-emp-js/delete-emp.js",
+              "src/assets/Attendance-emp-js/Attendance-emp.js",
+              "src/assets/Work-emp-js/Work-emp.js",
+              "src/assets/dailyshift/insertdailyshift.js",
+              "src/assets/dailyshift/updatedailyshift.js",
+              "src/assets/dailyshift/deletedailyshift.js",
+              "src/assets/dailyshift/insertequipment.js",
+              "src/assets/dailyshift/updateequipment.js",
+              "src/assets/dailyshift/deleteequipment.js",
+              "src/assets/Inventory/addstockdetails.js",
+              "src/assets/Inventory/deletestockdetails.js",
+              "src/assets/AccountsValidation/addEmpFDetails.js",
+              "src/assets/AccountsValidation/deleteEmpDetails.js"
+
+              
+              
+            ]
           }
         },
         "lint": {

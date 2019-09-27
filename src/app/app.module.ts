@@ -20,7 +20,40 @@ import { UpdateEmpDetailsComponent } from './Pages/Employee/Admin/update-emp-det
 import { DeleteEmpDetailsComponent } from './Pages/Employee/Admin/delete-emp-details/delete-emp-details.component';
 import { WorkEmpDetailsComponent } from './Pages/Employee/Admin/work-emp-details/work-emp-details.component';
 import { AttendanceEmpDetailsComponent } from './Pages/Employee/Admin/attendance-emp-details/attendance-emp-details.component';
-
+import { InsertDailyShiftComponent } from './Pages/Maintanence/Admin/insert-daily-shift/insert-daily-shift.component';
+import { InsertEquipmentComponent } from './Pages/Maintanence/Admin/insert-equipment/insert-equipment.component';
+import { UpdateDailyShiftComponent } from './Pages/Maintanence/Admin/update-daily-shift/update-daily-shift.component';
+import { DeleteDailyShiftComponent } from './Pages/Maintanence/Admin/delete-daily-shift/delete-daily-shift.component';
+import { DeleteEquipmentComponent } from './Pages/Maintanence/Admin/delete-equipment/delete-equipment.component';
+import { EquipmentUpdateCenterComponent } from './Pages/Maintanence/Admin/equipment-update-center/equipment-update-center.component';
+import { MaintanaceSidebarComponent } from './Components/sidebar/Maintanence-Sidebar/maintanace-sidebar/maintanace-sidebar.component';
+import { VehicleComponent } from './Pages/Transport/vehicle/vehicle.component';
+import { AvailableComponent } from './Pages/Transport/available/available.component';
+import { UpdateComponent } from './Pages/Transport/update/update.component';
+import { DeleteComponent } from './Pages/Transport/delete/delete.component';
+import { TransportSidebarComponent } from './Components/sidebar/Transport-sidebar/transport-sidebar/transport-sidebar.component';
+import { ViewEmpDetailsComponent } from './Pages/Employee/Employee/view-emp-details/view-emp-details.component';
+import { EmployeeSidebarComponent } from './Components/sidebar/employee-sidebar/employee-sidebar.component';
+import { AddDetailsComponent } from './Pages/restaurant/add-details/add-details.component';
+import { ResSideBarComponent } from './Components/sidebar/ResSideBar/res-side-bar/res-side-bar.component';
+import { StockDetails2Component } from './Pages/restaurant/stock-details/stock-details2.component';
+import { DeleteDetailsComponent } from './Pages/restaurant/delete-details/delete-details.component';
+import { TableBookingComponent } from './Pages/restaurant/table-booking/table-booking.component';
+import { UpdateDetailsComponent } from './Pages/restaurant/update-details/update-details.component';
+import { TableBookingDeleteComponent } from './Pages/restaurant/table-booking-delete/table-booking-delete.component';
+import { InsertDailyShift2Component } from './Pages/Maintanence/Admin/insert-daily-shift2/insert-daily-shift2.component';
+import { StockDetailsComponent } from './Pages/Inventory/stock-details/stock-details.component';
+import { SuplierDetailsComponent } from './Pages/Inventory/suplier-details/suplier-details.component';
+import { InventroySideBarComponent } from './Components/sidebar/inventory-sidebar/inventroy-side-bar/inventroy-side-bar.component';
+import { UpdateStockDetailsComponent } from './Pages/Inventory/update-stock-details/update-stock-details.component';
+import { DeleteStockDetailsComponent } from './Pages/Inventory/delete-stock-details/delete-stock-details.component';
+import { UpdateSupplierDetailsComponent } from './Pages/Inventory/update-supplier-details/update-supplier-details.component';
+import { DeleteSupplierDetailsComponent } from './Pages/Inventory/delete-supplier-details/delete-supplier-details.component';
+import { ViewEmployeeDetailComponent } from './Pages/Accounts/Admin/view-employee-detail/view-employee-detail.component';
+import { AddEmployeeDetailComponent } from './Pages/Accounts/Admin/add-employee-detail/add-employee-detail.component';
+import { UpdateEmployeeDetailComponent } from './Pages/Accounts/Admin/update-employee-detail/update-employee-detail.component';
+import { DeleteEmployeeDetailComponent } from './Pages/Accounts/Admin/delete-employee-detail/delete-employee-detail.component';
+import { AccountsSidebarComponent } from './Components/sidebar/accounts-sidebar/accounts-sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +72,40 @@ import { AttendanceEmpDetailsComponent } from './Pages/Employee/Admin/attendance
     DeleteEmpDetailsComponent,
     WorkEmpDetailsComponent,
     AttendanceEmpDetailsComponent,
+    InsertDailyShiftComponent,
+    InsertEquipmentComponent,
+    UpdateDailyShiftComponent,
+    DeleteDailyShiftComponent,
+    DeleteEquipmentComponent,
+    EquipmentUpdateCenterComponent,
+    MaintanaceSidebarComponent,
+    VehicleComponent,
+    AvailableComponent,
+    UpdateComponent,
+    DeleteComponent,
+    TransportSidebarComponent,
+    ViewEmpDetailsComponent,
+    EmployeeSidebarComponent,
+    AddDetailsComponent,
+    ResSideBarComponent,
+    StockDetails2Component,
+    DeleteDetailsComponent,
+    TableBookingComponent,
+    UpdateDetailsComponent,
+    TableBookingDeleteComponent,
+    InsertDailyShift2Component,
+    StockDetailsComponent,
+    SuplierDetailsComponent,
+    InventroySideBarComponent,
+    UpdateStockDetailsComponent,
+    DeleteStockDetailsComponent,
+    UpdateSupplierDetailsComponent,
+    DeleteSupplierDetailsComponent,
+    ViewEmployeeDetailComponent,
+    AddEmployeeDetailComponent,
+    UpdateEmployeeDetailComponent,
+    DeleteEmployeeDetailComponent,
+    AccountsSidebarComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-transport-sidebar></app-transport-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+                <div class="col-sm-9">
+                <div class="container">
+                        <h1>Add vehicle</h1>
+                        <form #newCustomer=ngForm>
+                                <label for='name'>Vehicle Id</label>
+                                <input type="text" class="form-control" id="id"
+                                required
+                                [(ngModel)]="model.id" name="id">
+                    
+                                <label for='name'>Vehicle Model</label>
+                                <input type="text" class="form-control" id="model"
+                                required
+                                [(ngModel)]="model.model" name="model">
+                    
+                                <label for='name'>License Plate</label>
+                                <input type="text" class="form-control" id="license"
+                                required
+                                [(ngModel)]="model.license" name="license">
+
+
+                                <label for='name'>Max passengers</label>
+                                <input type="text" class="form-control" id="passengers"
+                                required
+                                [(ngModel)]="model.passengers" name="passengers">
+                    
+                                <label for='name'>Manufacture Year</label>
+                                <input type="date" class="form-control" id="year"
+                                required
+                                [(ngModel)]="model.year" name="year">
+
+                                <label for='name'>Vehicle Colour</label>
+                                <input type="text" class="form-control" id="colour"
+                                required
+                                [(ngModel)]="model.colour" name="colour">
+                                <br>
+                            <button (click)="method1()" (click)="onclickvehicle()" type="submit" class="btn btn-success">Add</button>
+                    
+                        </form>
+                    </div>
+        </div>
+    </div>
+</div>
+

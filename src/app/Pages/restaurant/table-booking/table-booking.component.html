@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-res-side-bar></app-res-side-bar>
+<app-header></app-header>
+
+<div class="container-fluid" >
+    <div class="row content ">
+        <div class="col-sm-9">
+            <div class="container">
+                <h1>Table Booking</h1>
+                <br>
+                <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+                    <div class="form-group">
+                    <label for='tn'>Table Number</label>
+                    <input type="text"  class="form-control" id="tn" #tn="ngModel" required [(ngModel)]="model.tn" name="tn" [ngClass]="{ 'is-invalid': f.submitted && tn.invalid }" />
+                    <div *ngIf="f.submitted ||tn.touched && tn.invalid" class="invalid-feedback">
+                        <div *ngIf="tn.invalid">Table Number is required</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for='nc'>Number Of Chairs</label>
+                    <input type="text" class="form-control" id="nc" #nc="ngModel" required [(ngModel)]="model.nc" name="nc" [ngClass]="{ 'is-invalid': f.submitted && nc.invalid }"  >
+                    <div *ngIf="f.submitted ||nc.touched && nc.invalid" class="invalid-feedback">
+                        <div *ngIf="nc.invalid">Number Of Chairs is required</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for='bd'>Booking Date</label>
+                    <input type="Date" class="form-control" id="bd" #bd="ngModel" required [(ngModel)]="model.bd" name="bd" [ngClass]="{ 'is-invalid': f.submitted && bd.invalid }" >
+                    <div *ngIf="f.submitted ||bd.touched && bd.invalid" class="invalid-feedback">
+                        <div *ngIf="bd.invalid">Booking Date is required</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for='price'>Price</label>
+                    <input type="text" class="form-control" id="price" #price="ngModel" required [(ngModel)]="model.price" name="price" [ngClass]="{ 'is-invalid': f.submitted && price.invalid }" >
+                    <div *ngIf="f.submitted ||price.touched && price.invalid" class="invalid-feedback">
+                        <div *ngIf="price.invalid">Price is required</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ava">Available/Not Available</label>
+                        <select class="form-control" id="ava"  (change)="handleAvailableChange($event)">
+                            <option value="1" selected>Available</option>
+                            <option value="0" >Not Available</option>
+                        </select>
+                    </div>
+                    <button  type="submit" class="btn btn-success"  >ADD</button>
+                      <br><br><br>
+                      <h1>Checking Availability</h1>
+
+                          <table class="table table-trapped">
+                            <thead>
+                              <tr>
+                                <th>Table Number</th>
+                                <th>Number of Chairs</th>
+                                <th>Booking Date</th>
+                                <th>Price</th>
+                                <th>Available/Not Available</th>
+                                 <th></th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+
+                            </tbody>
+                          </table>
+                          </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

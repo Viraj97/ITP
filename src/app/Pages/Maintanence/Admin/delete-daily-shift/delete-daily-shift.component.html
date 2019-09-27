@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-maintanace-sidebar></app-maintanace-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                        <h1>DailyShift Delete Center</h1>
+                        <form #insertdailyshift=ngForm>
+                    
+                                <label for='name'>Employee Id:</label>
+                                <input type="text" class="form-control" id="NIC"
+                                required
+                                [(ngModel)]="model2.NIC" name="NIC">
+                    
+                               
+<br>
+                            <button type="submit" class="btn btn-success" (click)=" onClickDelete()" (click)="method2()">Submit</button>
+                    
+                        </form>
+                    </div>
+        </div>
+    </div>
+</div>
+
+     

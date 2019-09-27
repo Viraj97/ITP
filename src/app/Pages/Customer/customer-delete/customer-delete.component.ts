@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { deleteAlert } from './../../../Pages/SweetAlert/deletealert'
 @Component({
   selector: 'app-customer-delete',
   templateUrl: './customer-delete.component.html',
@@ -25,5 +26,11 @@ export class CustomerDeleteComponent implements OnInit {
     }).subscribe((response) => {
       console.log('response here', response[0].deletecustomer);
     });
+  }
+  isValidForm(form) {
+    return form.form.valid
+  }
+  showmodel() {
+    new deleteAlert('DELETE?','Sure?','warning',true,'Delete');
   }
 }

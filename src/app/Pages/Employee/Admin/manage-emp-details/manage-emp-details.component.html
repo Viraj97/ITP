@@ -1,13 +1,15 @@
-<!--p>manage-emp-details works!</-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-employee-sidebar></app-employee-sidebar>
+<app-header></app-header>
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-9">
             <div class="container">
-                <h1 >New Employee</h1>
-                <form #newCustomer=ngForm style="width: 800px ">
+               
+                <form #newCustomer=ngForm style="width: 800px " >
+                    <h1 >New Employee</h1>
                     <label for='name'>Employee ID</label>
                     <input type="text" class="form-control" id="empId" required [(ngModel)]="model.id" name="id">
 
@@ -37,26 +39,28 @@
                     
                     <label for='name'>Gender</label>
                     <p>
-                        <input class="w3-radio" type="radio" required [(ngModel)]="model.gender" name="gender" id="genderM" value="male" >
+                        <input class="w3-radio" type="radio" required [(ngModel)]="model.gender" name="gender" id="genderM" value="Male" >
                         <label>Male</label></p>
                         <p>
-                        <input class="w3-radio" type="radio" required [(ngModel)]="model.gender" name="gender" id="genderF" value="female">
+                        <input class="w3-radio" type="radio" required [(ngModel)]="model.gender" name="gender" id="genderF" value="Female">
                         <label>Female</label></p>
                         <p>
                     
                     <label for='name'>Married Status</label>
                     <p>
-                        <input class="w3-radio" type="radio" required [(ngModel)]="model.marry" name="marry" id="marry" value="marry" >
+                        <input class="w3-radio" type="radio" required [(ngModel)]="model.marry" name="marry" id="marry" value="Marry" >
                         <label>Married</label></p>
                         <p>
                         <input class="w3-radio" type="radio" required [(ngModel)]="model.marry" name="marry" id="Unmarry" value="Unmarry">
                         <label>Unmarried</label></p>
                         <p>        
                     <br>
-                    <button (click)="onClick()" type="submit" class="btn btn-success">Add</button>
+                    <button (click)="method1()" (click)="onClick()" type="submit" class="btn btn-success">Add</button>
 
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+

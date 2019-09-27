@@ -2,17 +2,20 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-employee-sidebar></app-employee-sidebar>
+<app-header></app-header>
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-9">
             <div class="container">
-                <h1>Delete Employee</h1>
+               
                 <form #newCustomer=ngForm style="width: 800px">
+                    <h1>Delete Employee</h1>
                     <label for='name'>Employee ID</label>
-                    <input type="text" class="form-control" id="Did" required [(ngModel)]="model.name" name="DempId">
+                    <input type="text" class="form-control" id="Did" required [(ngModel)]="model.id" name="DempId">
 
                     <br>
-                    <button (click)="onClickDelete()" type="submit" class="btn btn-success">Delete</button>
+                    <button (click)="method2()" (click)="onClickDelete()" type="submit" class="btn btn-success">Delete</button>
 
                 </form>
             </div>
