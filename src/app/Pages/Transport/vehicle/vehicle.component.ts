@@ -8,7 +8,9 @@ declare const validate:any;
 })
 export class VehicleComponent{
     
-   constructor(private http: HttpClient){}
+   constructor(private http: HttpClient){
+     this.getModels()
+   }
 
   model = {
     id: '',
@@ -21,6 +23,9 @@ export class VehicleComponent{
 
   };
 
+
+  vehicles = null;
+  makes = null;
   
   submitted = false;
   
@@ -33,6 +38,22 @@ method1(){
   }).subscribe((response)=>{
     console.log('response',response[0].AddVehicle);
   });
+}
+
+populateSelect(value){
+this.http.get('http://127.0.0.1:3000/getVehicleByModel',{
+  params: {model:value}
+}).subscribe(response => {
+  this.vehicles = response;
+  console.log(response);
+})
+}
+
+getModels(){
+  this.http.get('http://127.0.0.1:3000/getmakes',{
+  }).subscribe(response=>{
+    this.makes = response;
+  })
 }
 
 onclick(){

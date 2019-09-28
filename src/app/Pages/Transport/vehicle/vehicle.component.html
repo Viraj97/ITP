@@ -3,199 +3,35 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 
-
 <div class="container-fluid">
     <div class="row content">
                 <div class="col-sm-9">
                 <div class="container">
                         <h1>Add vehicle</h1>
                         <form #newCustomer=ngForm>
+
                                 <label for='name'>Vehicle Id</label>
-                                <input type="text" class="form-control" id="id"
+                                <input type="text" class="form-control" id="id" ng-model="myInput" 
                                 required
                                 [(ngModel)]="model.id" name="id">
+                                
                     
                                 <div class="select-field valid">
-                                <label for='name'>Vehicle</label>
-                                <!-- <input type="text" class="form-control" id="model"
-                                required
-                                [(ngModel)]="model.model" name="model"> -->
-                                <select id = "vehicle" name="vehicle" [(ngModel)]="model.vehicle" class="form-control">
+                                <label for='name'>Make</label>
+                                <select id = "vehicle" name="vehicle" [(ngModel)]="model.vehicle" (change)="populateSelect($event.target.value)" class="form-control">
                                   <option value="" disabled="" selected="">Choose</option>
-                                  <option value="bc83b340-4229-4a5b-8e30-6b11f7847cab">Other</option>
-                                  <!-- <option value="ecef77eb-8554-405b-9757-a1f2e28fd95d">ATV</option>
-                                  <option value="6ea1fe18-3167-4838-8b8c-d135dc874503">Boat</option>
-                                  <option value="3161fda8-058b-4de2-a1d5-fae5bda0b3f4">Motorcycle</option>
-                                  <option value="f5803112-5e4b-4338-8bf1-2fe43d28cfa2">RV</option>
-                                  <option value="f12b87e3-9c94-4e75-99d6-5c33221d9ff5">AC</option>
-                                  <option value="4568c119-d09a-4ebf-b587-95b0e5ddc040">Acura</option>
-                                  <option value="4ad36974-4f8f-466f-965f-aac128be296d">Alfa Romeo</option>
-                                  <option value="7d291f0f-9463-4bd8-8d53-d94c4c86bb59">AM General</option>
-                                  <option value="1f0210c9-c7d6-4472-be6d-118757ae4ae1">AMC</option>
-                                  <option value="7112e890-4eab-4087-8c92-5c9e654c5aec">Aston Martin</option>
-                                  <option value="baa6fee0-1d31-4348-a34a-f09524bcd33d">Audi</option>
-                                  <option value="90045753-3fdb-485c-8aec-79f0fab1877a">Austin</option>
-                                  <option value="afd0ce30-b46d-4a2a-82ab-ade7401d993a">Austin Healey</option>
-                                  <option value="a51fa20a-caf9-4f1e-80c0-4b4d4a7ea70f">Bentley</option>
-                                  <option value="6a586921-2787-44c5-bfac-86728c9f1153">BMW</option>
-                                  <option value="103c5dfb-1db9-4ddb-a09e-5f92edad285f">Bricklin</option>
-                                  <option value="2fdeccea-c088-4510-b35b-85f5921ca355">Buick</option>
-                                  <option value="6747f737-7bc7-4c4d-9745-8e398972ecfe">Cadillac</option>
-                                  <option value="a7073a38-3c8f-4860-b0c3-04e05bb46463">Checker</option>
-                                  <option value="e5783dfa-70a2-4f38-b6cd-aec6a8460c30">Chevrolet</option>
-                                  <option value="9128eab5-3f3f-49de-b094-63374f2b1669">Chrysler</option>
-                                  <option value="d9def588-b9ec-46f8-a93b-a77160387e3c">Cord</option>
-                                  <option value="a17e23af-8a75-4d73-bb41-30f1db477b4c">Daewoo</option>
-                                  <option value="fb6e2dc2-193a-4070-9172-104880a0b3dc">Daihatsu</option>
-                                  <option value="8a5b9c04-53d7-422b-9861-0f7b9a739d40">Daimler</option>
-                                  <option value="ea662438-eaa9-47b8-a1cc-be9f69436cfd">Datsun</option>
-                                  <option value="8c6b5859-eda3-445b-ad99-4000d3b0aacb">DeLorean</option>
-                                  <option value="d9422b99-c136-40bd-9e7a-d5f27e4fa3b5">DeSoto</option>
-                                  <option value="ac8669c0-e92a-4d96-910c-78b9f0d6e687">Detomaso</option>
-                                  <option value="fdd8b2f9-5521-4286-942f-0b36d6200887">Dodge</option>
-                                  <option value="1702416c-3a41-4556-abd5-bf182fadb0c0">Ducati</option>
-                                  <option value="81aa2046-fa6b-43ed-a258-6c9f1a8160eb">Eagle</option>
-                                  <option value="e37c5ca6-97a8-47c4-8069-88662c1e028d">Edsel</option>
-                                  <option value="7f8f7cc4-ef93-443d-89e7-cc5d6b5cb28b">Ferrari</option>
-                                  <option value="74fcc044-907d-46cc-8a39-a5d06ad46d63">Fiat</option>
-                                  <option value="60e2f40e-b248-4775-9cb0-3a688ef4aeef">Ford</option>
-                                  <option value="2a05557a-6779-4121-824c-a7bfa2f660d2">Galloper</option>
-                                  <option value="0bd68d33-1402-4913-abf6-96bc72d271cf">Geo</option>
-                                  <option value="7602e746-7bae-43b0-82c5-81c3812bdf27">Genesis</option>
-                                  <option value="74343266-5a00-4aba-8716-e72cac8e59d0">GMC</option>
-                                  <option value="6b8eaaf9-0f1d-4223-8ed7-401b35b6748f">Harley Davidson</option> -->
-                                  <option value="c7809619-2b3a-4fb8-8d60-bd487ea58136">Honda</option>
-                                  <!-- <option value="7ddc3d21-5f84-4c4a-a09a-9b3e7c19fc4c">Hummer</option>
-                                  <option value="5d681282-b9a1-4a0c-97d3-a0a7cffad3f9">Hyundai</option>
-                                  <option value="bd88e72e-e477-485b-92b8-228de45637bf">Infiniti</option>
-                                  <option value="b3f1f967-db6f-4475-b3a4-b0778a975bb0">International</option>
-                                  <option value="0c905b9f-8a12-454f-bb65-9363e25f934f">Isuzu</option>
-                                  <option value="756dc14e-6284-4da4-8e48-51cffbc1567a">Jaguar</option>
-                                  <option value="8d5b0684-2e64-409f-950f-d89a1cab2531">Jeep</option>
-                                  <option value="0b1891c1-9e16-4230-990e-1af5a78aaa1c">Jensen</option>
-                                  <option value="7ac5ef24-9530-4a95-9204-48176fd503dc">Kia</option>
-                                  <option value="a2121da4-4fbf-4a86-bbde-9703b078b0f4">Kawasaki</option>
-                                  <option value="433fb9b4-28f5-46a4-85da-62fc3d111870">Lamborghini</option>
-                                  <option value="0020dddb-ddf2-4443-9fb1-360ce8de1c72">Land Rover</option>
-                                  <option value="60b0a762-d175-47ed-8990-be8a96c2125a">Lexus</option>
-                                  <option value="5bdaa6a6-d1e0-4528-9cb0-e1380b77b01c">Lincoln</option>
-                                  <option value="0d41a552-b4fb-4b84-a44f-d671f3b98cd2">Lotus</option>
-                                  <option value="6c3bc4ab-57d4-4302-b51e-95a81c83f229">Maserati</option>
-                                  <option value="52be9d09-4a35-47d3-8f2f-57fdb1f88224">Maybach</option>
-                                  <option value="76f2734c-ca51-4b40-a6f1-52cc31b63c26">Mazda</option>
-                                  <option value="2dad0b0b-9c1a-4561-89c6-7027174702bb">Mercedes-Benz</option>
-                                  <option value="1e42d064-147c-4a39-9e52-847bfeaccd8e">Mercury</option>
-                                  <option value="c9f4fd80-cf22-4c74-844f-1ae348a69119">Merkur</option>
-                                  <option value="96b5ad65-eb08-47f7-871f-b58bb42f4da6">MG</option>
-                                  <option value="bc6d3d84-461c-4f52-b648-72b0688ccc19">Mini</option>
-                                  <option value="dd924526-4324-4547-bb2d-2bf4898ec80a">Mitsubishi</option>
-                                  <option value="4e5a5c9f-f8f2-483d-9057-112fb2c43de6">Morris</option>
-                                  <option value="a9fd45ee-d0b6-41be-95ff-eb837a6f1749">Nash</option>
-                                  <option value="cd723990-86e1-4574-87ad-09310eac2961">Nissan</option>
-                                  <option value="c50e294e-4865-4987-92d8-c01d2eb4b7e3">Oldsmobile</option>
-                                  <option value="3c63abe5-97f9-4495-b369-7ed8cce2fb95">Opel</option>
-                                  <option value="4d46c0fc-312e-48b1-9d1c-31c925bbf0b3">Packard</option>
-                                  <option value="22bad838-6764-47ee-8fc5-7e31ed0b5fd1">Peugeot</option>
-                                  <option value="64e1524b-c792-4c43-8028-f159c5c82377">Plymouth</option>
-                                  <option value="1ab2f830-1817-44d0-84bc-ac372cca3d2c">Pontiac</option>
-                                  <option value="d16d95aa-8eeb-47dd-a080-2093127e173a">Porsche</option>
-                                  <option value="7c81b39f-b759-441a-be6c-9b799162e444">Renault</option>
-                                  <option value="7e2dbe9d-4c33-4607-84bc-ce5e727cbe61">Rolls-Royce</option>
-                                  <option value="f201a06b-0910-4c21-9bfb-7691ed61cbec">Saab</option>
-                                  <option value="87863014-28b8-46f3-ab9c-52550da8e5d9">Saturn</option>
-                                  <option value="7d0c6610-6ed3-4ffd-bca7-bc669adfa852">Scion</option>
-                                  <option value="87efe474-d175-44b6-97b1-247be87b117c">Shelby</option>
-                                  <option value="db0bb168-a931-48a5-8149-0f1dda14d4fc">Smart</option>
-                                  <option value="1700cf53-af96-401d-a3cc-e408bfd7327c">Studebaker</option>
-                                  <option value="30ec5773-1f4a-45d1-8110-0b15f74c22dc">Subaru</option>
-                                  <option value="0e596580-04b9-4047-b752-6d02d1b9230e">Sunbeam</option>
-                                  <option value="2798cb55-df2e-4a20-96ea-2a012a9d1ca8">Suzuki</option>
-                                  <option value="c4b78096-f276-4e76-a558-55c8f965a6bf">Tata</option>
-                                  <option value="0dce1609-1b82-477b-9582-5bdf1d429946">Tesla</option> -->
-                                  <option value="5f7ca607-95df-45e3-b1fa-64af3d7ad0f7">Toyota</option>
-                                  <!-- <option value="4700acc0-50d3-40bf-80b7-03f114b35acf">Triumph</option>
-                                  <option value="7f7afb80-1c3d-4835-8e9b-461801432896">Volkswagen</option> -->
-                                  <!-- <option value="fdf0c37c-1ad8-4950-8e67-2c737c445fe0">Volvo</option> -->
-                                  <!-- <option value="a612f186-f31b-4cd8-9cf9-108fd6e4782c">Willys</option>
-                                  <option value="e2f7bfd6-37b8-4b7b-8d71-4afb08111a9d">Yamaha</option>
-                                  <option value="4f972e53-71a9-4f15-a5bc-43635c7f0db7">Yugo</option> -->
+                                  <option *ngFor="let make of makes" value={{make.value}}>{{make.text}}</option>
                                 </select>
                                 </div>
 
                                 
                                 <div class="select-field invalid">
                                 <label for='name'>Vehicle Model</label>
-                                <!-- <input type="text" class="form-control" id="license"
-                                required
-                                [(ngModel)]="model.license" name="license"> -->
                                 <select id = "model" name="model" [(ngModel)]="model.model" class="form-control">
-                                <!-- <select name="license" id="license" class="select-field__select"> -->
-                                    <!-- Honda -->
-                                    <option value="" disabled="" selected="">Choose</option>
-                                    <option value="2c7a5111-d1aa-4dbc-b3fd-b25c652fa2fe">Accord</option>
-                                    <option value="25d2585b-2710-4bec-9a35-c07d310486f9">Civic</option>
-                                    <option value="0ed66ee6-89ed-4be8-aa48-537b826fdc5a">Civic CRX</option>
-                                    <option value="52767674-f71d-4df8-b232-15541afd7475">Civic Del Sol</option>
-                                    <option value="7882a0d7-58e6-40ce-8ce7-f188fdfd6fb8">Civic Hybrid</option>
-                                    <option value="fce1077d-8738-4cc7-9e25-8e86e24f5150">Civic Si</option>
-                                    <option value="7b63240c-22e7-4dd0-a514-f9b1ac951667">Crosstour</option>
-                                    <option value="75537a70-ad17-4177-843e-5cd34caa4d34">CR-V</option>
-                                    <option value="1624fa7d-71aa-4b4b-909d-562bd1764aff">CRX</option>
-                                    <option value="5ad3fc42-9daf-41bd-bcfc-89514da76370">CR-Z</option>
-                                    <option value="2c2e0731-3bd0-4f3e-b184-304f5e515808">Element</option>
-                                    <option value="d8defb8e-ef8b-4da1-821d-e168770ca205">Fit</option>
-                                    <option value="c53aac9a-7b60-4680-b554-94d21a445396">FCX Clarity</option>
-                                    <option value="2e93c8fe-23cd-498c-a4fd-599078cd8c38">FR-V</option>
-                                    <option value="0dbcd35c-3d77-4735-9ab0-a101237613d9">HR-V</option>
-                                    <option value="d98d42b2-f5db-4fbd-8ad4-0b551505c009">Insight</option>
-                                    <option value="e66dabf6-ba4d-4c3c-a22c-1ab26a764ee7">Motorcycle</option>
-                                    <option value="2899b411-f67e-4d04-ae3e-7830c9751e36">Odyssey</option>
-                                    <option value="3653130b-4de5-4c35-a3ac-23661bfe99e6">Passport</option>
-                                    <option value="0d6ca28c-606c-43a1-a526-0ad31a270923">Pilot</option>
-                                    <option value="7c31179e-f671-4b00-9d5f-cc43095c13f0">Prelude</option>
-                                    <option value="806306c2-d23e-4200-916f-b6eef6ca6c1c">Ridgeline</option>
-                                    <option value="aaf21c9d-25fb-4fa4-bf1c-bd2b9caff68d">S2000</option>
-                                    <option value="5605992e-f244-43f7-957a-3fec53b6bcb2">S600</option>
-                                    <option value="f5165184-c935-4ef4-9ae9-6e5a01a30254">S800</option>
-                                    <option value="a2a880e8-d48b-4b15-ac00-0a06052baa9a">Stream</option>
-
-                                   <!-- Toyota -->
-                                        <option value="" disabled="" selected="">Choose</option>
-                                        <option value="271a38ea-a520-4d6c-bd35-a9e4467b40fb">4Runner</option>
-                                        <option value="b048aa59-2b97-41d7-b64b-ea724cafe98a">86</option>
-                                        <option value="025e36d9-a3f9-49a5-af9f-87e69d74e0c6">Avalon</option>
-                                        <option value="d6111cb8-074f-450e-84e7-23d8d4831811">C-HR</option>
-                                        <option value="9c500b56-1a65-43c1-b1c7-5c0f82ab4835">Camry</option>
-                                        <option value="51cce52c-0c40-4ad6-ac44-ddc2af681f55">Celica</option>
-                                        <option value="fefba946-8eb9-42e8-9d44-96083e80280d">CH-R</option>
-                                        <option value="ddc0ffaa-2714-4455-bbfc-95a56b186657">Corolla</option>
-                                        <option value="9e5c0dae-c177-4f4a-92fe-06c3613baeb2">Corona</option>
-                                        <option value="2e3c0d21-b752-4e8f-b1a8-34528b93b68a">Cressida</option>
-                                        <option value="be1201c6-f3d8-4c6b-ae5e-d1854eb90bd2">Echo</option>
-                                        <option value="9aa1c402-9c9c-4de0-9b7f-d3523169ea41">FJ Cruiser</option>
-                                        <option value="333fe539-a7af-44ce-8410-a37ed0baf75f">Highlander</option>
-                                        <option value="e01f8b90-a21a-4f73-b2e4-27652701648b">Land Cruiser</option>
-                                        <option value="9d66ba3f-2c08-4c9b-93f4-52e152014724">Matrix</option>
-                                        <option value="400d54d1-b7ad-4ec3-9178-b99a9b32809e">MR2</option>
-                                        <option value="6bb6b2c6-0456-45ae-8f9a-ae6e04d62a1e">MR2 Spyder</option>
-                                        <option value="af85f379-010f-49fc-8d0f-b35a5e16b831">Paseo</option>
-                                        <option value="31fef97f-ecd5-4426-9f08-04e4b2da3682">Pickup</option>
-                                        <option value="4c15301b-5337-4c08-bdaa-a321d6f8e073">Previa</option>
-                                        <option value="8098ef31-4d93-4a61-9035-4f1405917bd3">Prius</option>
-                                        <option value="4ab09f53-801e-4a32-814f-1a9144a9d2ee">RAV4</option>
-                                        <option value="8e6114ba-d5b2-4ae8-bf66-a58ad300b6f8">Sequoia</option>
-                                        <option value="aa97570a-014f-464a-ae8f-3d48a355ff83">Sienna</option>
-                                        <option value="e297380a-f08a-4063-bd7c-c352be730e47">Solara</option>
-                                        <option value="797c1099-634f-4120-93b7-eb5bb51446d1">Starlet</option>
-                                        <option value="98ec709b-355f-458f-959f-908171c049dd">Supra</option>
-                                        <option value="eea62838-f43e-4d4e-8769-1e2043844569">T100</option>
-                                        <option value="97b291c8-6ff6-4e6c-beff-1a487c8726be">Tacoma</option>
-                                        <option value="cb7161f9-2412-4c14-99a3-b5415a24e712">Tercel</option>
-                                        <option value="dbd2cdc1-3db1-4e35-aa59-ac55565bbb48">Tundra</option>
-                                        <option value="6da17ead-4b07-4809-b96d-41ca01068e95">Van</option>
-                                        <option value="40152731-d505-4403-a5a4-f63d7f311935">Yaris</option>
+                                        <option *ngFor="let vehicle of vehicles" value={{vehicle.value}}>{{vehicle.text}}</option>
                                 </select>
                                 </div>
+
 
                                 <label for='name'>License Plate</label>
                                 <input type="text" class="form-control" id="license"
@@ -203,12 +39,14 @@
                                 [(ngModel)]="model.license" name="license">
 
                                 <label for='name'>Max passengers</label>
-                                <input type="text" class="form-control" id="passengers"
+                                <input type="number" class="form-control" id="passengers"
                                 required
                                 [(ngModel)]="model.passengers" name="passengers">
                     
+                                ​
+
                                 <label for='name'>Manufacture Year</label>
-                                <input type="text" class="form-control" id="year"
+                                <input type="date" class="form-control" id="year"
                                 required
                                 [(ngModel)]="model.year" name="year">
                                
@@ -225,4 +63,3 @@
         </div>
     </div>
 </div>
-
