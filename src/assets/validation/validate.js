@@ -13,7 +13,7 @@ function validate(){
 			alert('Please Enter Vehicle ID');
 			return false;
 		}
-		if(id.value == '')
+		if(vehicle.value == '')
 		{
 			alert('Please Enter Vehicle');
 			return false;

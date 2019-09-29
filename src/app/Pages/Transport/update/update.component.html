@@ -20,32 +20,37 @@
                                 <label for='name'>Vehicle Id</label>
                                 <input type="text" class="form-control" id="id"
                                 required
-                                [(ngModel)]="model.id" name="id">
+                                [(ngModel)]="model3.id" name="id">
+
+                                <label for='name'>Make</label>
+                                <input type="text" class="form-control" id="vehicle"
+                                required
+                                [(ngModel)]="model3.vehicle" name="vehicle">
                     
                                 <label for='name'>Vehicle Model</label>
                                 <input type="text" class="form-control" id="model"
                                 required
-                                [(ngModel)]="model.model" name="model">
+                                [(ngModel)]="model3.model" name="model">
                     
                                 <label for='name'>License Plate</label>
                                 <input type="text" class="form-control" id="license"
                                 required
-                                [(ngModel)]="model.license" name="license">
+                                [(ngModel)]="model3.license" name="license">
                     
                                 <label for='name'>Max passengers</label>
                                 <input type="text" class="form-control" id="passengers"
                                 required
-                                [(ngModel)]="model.passengers" name="passengers">
+                                [(ngModel)]="model3.passengers" name="passengers">
                     
                                 <label for='name'>Manufacture Year</label>
                                 <input type="date" class="form-control" id="year"
                                 required
-                                [(ngModel)]="model.year" name="year">
+                                [(ngModel)]="model3.year" name="year">
 
                                 <label for='name'>Vehicle Colour</label>
                                 <input type="text" class="form-control" id="colour"
                                 required
-                                [(ngModel)]="model.colour" name="colour">
+                                [(ngModel)]="model3.colour" name="colour">
                                 <br>
                             <button (click)="method3()" (click)="onclick()" type="submit" class="btn btn-success">Update</button>
                     
