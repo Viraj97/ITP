@@ -23,6 +23,7 @@ export class UpdateComponent implements OnInit {
   };
 
   ngOnInit() {
+    this.getModels();
   }
 
   vehicles = null;
@@ -54,6 +55,7 @@ populateSelect(value){
   getModels(){
     this.http.get('http://127.0.0.1:3000/getmakes',{
     }).subscribe(response=>{
+      console.log(response);
       this.makes = response;
     })
   }
@@ -71,7 +73,8 @@ populateSelect(value){
     this.http.get('http://127.0.0.1:3000/edit',{
       params: {VehicleID:this.model4.id}
     }).subscribe((response)=>{
-      this.model3.id=response[0].data[0].VehicleID,this.model3.vehicle=response[0].data[0].Vehicle,this.model3.mod=response[0].data[0].VehicleModel,this.model3.license=response[0].data[0].Licence,this.model3.passengers=response[0].data[0].Max,this.model3.year=response[0].data[0].Year,this.model3.colour=response[0].data[0].Colour;
+      console.log(response[0].data[0]);
+      this.model3.id=response[0].data[0].VehicleID,this.model3.vehicle=response[0].data[0].vName,this.model3.mod=response[0].data[0].mName,this.model3.license=response[0].data[0].Licence,this.model3.passengers=response[0].data[0].Max,this.model3.year=response[0].data[0].Year,this.model3.colour=response[0].data[0].Colour;
       console.log('response',response[0].data[0].id);
     });
   }

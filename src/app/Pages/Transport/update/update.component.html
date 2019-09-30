@@ -38,9 +38,30 @@
                                 [(ngModel)]="model3.id" name="id" >
                             
                         
-                            
-                            
-                                <div class="select-field valid">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                            <label for='name'>Previous Make</label>
+                                            <input type="text"  class="form-control" id="vehicle" 
+                                            ng-model="myInput" required 
+                                            [(ngModel)]="model3.vehicle" name="vehicle" >
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                            <div class="select-field valid">
+                                                    <label for='name'>New Make</label>
+                                                    <select id = "vehicle"  name="vehicle" 
+                                                    ng-model="myInput" required 
+                                                    [(ngModel)]="model3.vehicle" (change)="populateSelect($event.target.value)" 
+                                                    class="form-control" >
+                                                      
+                                                      <option *ngFor="let make of makes" value={{make.value}}>{{make.text}}</option>
+                                                    </select>
+                                                    </div>
+                                    </div>            
+                                </div>
+                      
+                                 
+
+                                <!-- <div class="select-field valid">
                                 <label for='name'>Make</label>
                                 <select id = "vehicle"  name="vehicle" 
                                 ng-model="myInput" required 
@@ -49,11 +70,30 @@
                                   
                                   <option *ngFor="let make of makes" value={{make.value}}>{{make.text}}</option>
                                 </select>
-                                </div>
-                                
+                                </div> -->
+                               
+                                <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                                <label for='name'>Previous Model</label>
+                                                <input type="text"  class="form-control" id="mod" 
+                                                ng-model="myInput" required 
+                                                [(ngModel)]="model3.mod" name="mod" >
+                                        </div>
+                                        <div class="form-group col-md-8">
+                                                <div class="select-field invalid">
+                                                        <label for='name'>New Vehicle Model</label>
+                                                        <select id = "mod" name="mod" 
+                                                        ng-model="myInput" required  
+                                                        [(ngModel)]="model3.mod" class="form-control" >
+                                                            
+                                                                <option *ngFor="let vehicle of vehicles" value={{vehicle.value}}>{{vehicle.text}}</option>
+                                                        </select>
+                                                        </div>
+                                        </div>            
+                                    </div>
                                 
                             
-                                <div class="select-field invalid">
+                                <!-- <div class="select-field invalid">
                                 <label for='name'>Vehicle Model</label>
                                 <select id = "mod" name="mod" 
                                 ng-model="myInput" required  
@@ -61,7 +101,7 @@
                                     
                                         <option *ngFor="let vehicle of vehicles" value={{vehicle.value}}>{{vehicle.text}}</option>
                                 </select>
-                                </div>
+                                </div> -->
                                 
                                 
                             
