@@ -14,77 +14,86 @@
 
                             <div class="form-group" [class.has-error]="id.invalid && id.touched">
                                 <label for='name'>Vehicle Id</label>
-                                <input type="text" placeholder="Ex: V001" maxlength= "4" class="form-control" id="id" ng-model="myInput" 
-                                required #id="ngModel" 
-                                [(ngModel)]="model.id" name="id">
+                                <input type="text" placeholder="Ex: V001" maxlength= "4" class="form-control" id="id" 
+                                ng-model="myInput" required #id="ngModel" 
+                                [(ngModel)]="model.id" name="id" onchange="validate();">
                                 <span class="help-block"
-                                *ngIf="id.invalid && id.touched">Vehicle ID is required</span>
+                                *ngIf="id.invalid && id.touched">Id is required</span>
                             </div>
                         
+                            
                             <div class="form-group" [class.has-error]="vehicle.invalid && vehicle.touched">
                                 <div class="select-field valid">
                                 <label for='name'>Make</label>
-                                <select id = "vehicle"  name="vehicle" ng-model="myInput" required #vehicle="ngModel"  [(ngModel)]="model.vehicle" (change)="populateSelect($event.target.value)" class="form-control">
+                                <select id = "vehicle"  name="vehicle" onchange="validate();"
+                                ng-model="myInput" required  #vehicle="ngModel"
+                                [(ngModel)]="model.vehicle" (change)="populateSelect($event.target.value)" 
+                                class="form-control" >
                                   <option value="" disabled="" selected="">Choose</option>
                                   <option *ngFor="let make of makes" value={{make.value}}>{{make.text}}</option>
                                 </select>
                                 </div>
                                 <span class="help-block"
-                                *ngIf="vehicle.invalid && vehicle.touched">Vehicle is required</span>
+                                *ngIf="vehicle.invalid && vehicle.touched">Vehicle make is required</span>
                             </div>
                                 
-                                <div class="form-group" [class.has-error]="model.invalid && model.touched">
+                                
+                            <div class="form-group" [class.has-error]="mod.invalid && mod.touched">
                                 <div class="select-field invalid">
                                 <label for='name'>Vehicle Model</label>
-                                <select id = "model" name="model" ng-model="myInput" required #model="ngModel" [(ngModel)]="model.model" class="form-control">
+                                <select id = "mod" name="mod" onchange="validate();"
+                                ng-model="myInput" required  #mod="ngModel"
+                                [(ngModel)]="model.mod" class="form-control" >
                                         <option value="" disabled="" selected="">Choose</option>
                                         <option *ngFor="let vehicle of vehicles" value={{vehicle.value}}>{{vehicle.text}}</option>
                                 </select>
                                 </div>
                                 <span class="help-block"
-                                *ngIf="model.invalid && model.touched">Vehicle model is required</span>
-                                </div>
+                                *ngIf="mod.invalid && mod.touched">Vehicle make is required</span>
+                            </div>   
 
-                                <div class="form-group" [class.has-error]="license.invalid && license.touched">
+                                
+                            <div class="form-group" [class.has-error]="license.invalid && license.touched">
                                 <label for='name'>License Plate</label>
                                 <input type="text" placeholder="Vehicle license plate no" class="form-control" id="license"
-                                required ng-model="myInput" required #license="ngModel"
-                                [(ngModel)]="model.license" name="license">
+                                ng-model="myInput" required #license="ngModel"
+                                [(ngModel)]="model.license" name="license" onchange="validate();">
                                 <span class="help-block"
-                                *ngIf="license.invalid && license.touched">License no is required</span>
-                                </div>
+                                *ngIf="license.invalid && license.touched">License plate no is required</span>
+                            </div>
 
-                                <div class="form-group" [class.has-error]="passengers.invalid && passengers.touched">
+                                
+                            <div class="form-group" [class.has-error]="passengers.invalid && passengers.touched">
                                 <label for='name'>Max passengers</label>
                                 <input type="number" placeholder="Enter only numbers" class="form-control" id="passengers"
-                                required ng-model="myInput" required #passengers="ngModel"
-                                [(ngModel)]="model.passengers" name="passengers">
+                                ng-model="myInput" required #passengers="ngModel"
+                                [(ngModel)]="model.passengers" name="passengers" onchange="validate();">
                                 <span class="help-block"
-                                *ngIf="passengers.invalid && passengers.touched">Max passengers is required</span>
-                                </div>
+                                *ngIf="passengers.invalid && passengers.touched">No of passengers is required</span>
+                            </div>   
                     
                                 ​
-                                <div class="form-group" [class.has-error]="year.invalid && year.touched">
+                            <div class="form-group" [class.has-error]="year.invalid && year.touched">  
                                 <label for='name'>Manufacture Year</label>
                                 <input type="date" class="form-control" id="year"
-                                required ng-model="myInput" required #year="ngModel"
-                                [(ngModel)]="model.year" name="year">
+                                ng-model="myInput" required #year="ngModel"
+                                [(ngModel)]="model.year" name="year" onchange="validate();">
                                 <span class="help-block"
                                 *ngIf="year.invalid && year.touched">Manufacture year is required</span>
-                                </div>
+                            </div>   
                                
 
-                                <div class="form-group" [class.has-error]="colour.invalid && colour.touched">
+                            <div class="form-group" [class.has-error]="colour.invalid && colour.touched">       
                                 <label for='name'>Vehicle Colour</label>
                                 <input type="text" placeholder="Enter vehicle colour" class="form-control" id="colour"
-                                required ng-model="myInput" required #colour="ngModel"
-                                [(ngModel)]="model.colour" name="colour">
+                                ng-model="myInput" required #colour="ngModel"
+                                [(ngModel)]="model.colour" name="colour" onchange="validate();">
                                 <span class="help-block"
                                 *ngIf="colour.invalid && colour.touched">Vehicle colour is required</span>
-                                </div>        
+                            </div>             
 
                                 <br>
-                            <button (click)="method1()" (click)="onclick()" type="submit" class="btn btn-success" disabled="disabled">Add</button>
+                            <button (click)="method1()" (click)="sweetAlertAdd1()" type="submit" id="btnAdd" class="btn btn-success" disabled="disabled">Add</button>
                     
                         </form>
                     </div>

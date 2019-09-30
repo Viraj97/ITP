@@ -1,47 +1,44 @@
 function validate(){
 	var id = document.getElementById('id');
 	var vehicle = document.getElementById('vehicle');
-	var model = document.getElementById('model');
+	var model = document.getElementById('mod');
 	var license = document.getElementById('license');
 	var passengers = document.getElementById('passengers');
 	var year = document.getElementById('year');
 	var colour = document.getElementById('colour');
-	
+	var BtnAId = document.getElementById('btnAdd')
 		
 		if(id.value == '')
 		{
-			alert('Please Enter Vehicle ID');
-			return false;
+			BtnAId.disabled=true;
 		}
-		if(vehicle.value == '')
+		else if(vehicle.value == '')
 		{
-			alert('Please Enter Vehicle');
-			return false;
+			BtnAId.disabled=true;
 		}
-		if(model.value == '')
+		else if(model.value == '')
 		{
-			alert('Please Enter Vehicle Model');
-			return false;
+			BtnAId.disabled=true;
 		}
-		if(license.value == '')
+		else if(license.value == '')
 		{
-			alert('Please Enter License No');
-			return false;
+			BtnAId.disabled=true;
 		}
-		if(passengers.value == '')
+		else if(passengers.value == '')
 		{
-			alert('Please Enter No Of Passengers');
-			return false;
+			BtnAId.disabled=true;
 		}
-		if(year.value == '')
+		else if(year.value == '')
 		{
-			alert('Please Enter Manufactured Year');
-			return false;
+			BtnAId.disabled=true;
 		}
-		if(colour.value == '')
+		else if(colour.value == '')
 		{
-			alert('Please Enter Vehicle Colour');
-			return false;
+			BtnAId.disabled=true;
+		}
+		else
+		{
+			BtnAId.disabled=false;
 		}
 	
 		

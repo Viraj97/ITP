@@ -7,54 +7,100 @@
                 <div class="container">
                         <h1>Update vehicle</h1>
 
-                        <!-- <form #newCustomer=ngForm>
-
-                            <label for='name'>Vehicle ID</label>
-                            <input type="text" class="form-control" id="nic" required [(ngModel)]="model2.id" name="nic">
-        <br>
-                            <button type="submit" class="btn btn-success" (click)="method2()" >Ok</button>
-        
-                        </form> -->
-                       
                         <form #newCustomer=ngForm>
-                                <label for='name'>Vehicle Id</label>
-                                <input type="text" class="form-control" id="id"
-                                required
-                                [(ngModel)]="model3.id" name="id">
+                                <div class="panel form-panel" style="margin-top: 40px ">
+                                    <div class="panel-heading">
+                                        <p class="head">View Vehicle Details</p>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for='name'>Vehicle ID</label>
+                                            <div class="form-group" [class.has-error]="id.invalid && id.touched">
+                                                <input type="text" class="form-control" id="id" required #id="ngModel"
+                                                [(ngModel)]="model4.id" name="id">
+                                                <span class="help-block"
+                                                *ngIf="id.invalid && id.touched">Vehicle id is required</span>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <button type="submit" class="btn btn-success" (click)="method4()">View</button>
+                                    </div>
+                                </div>
+                            </form>
 
+                        <form #newCustomer=ngForm action="/" method="GET">
+
+                            
+                                <label for='name'>Vehicle Id</label>
+                                <input type="text"  maxlength= "4" class="form-control" id="id" 
+                                ng-model="myInput" required 
+                                [(ngModel)]="model3.id" name="id" >
+                            
+                        
+                            
+                            
+                                <div class="select-field valid">
                                 <label for='name'>Make</label>
-                                <input type="text" class="form-control" id="vehicle"
-                                required
-                                [(ngModel)]="model3.vehicle" name="vehicle">
-                    
+                                <select id = "vehicle"  name="vehicle" 
+                                ng-model="myInput" required 
+                                [(ngModel)]="model3.vehicle" (change)="populateSelect($event.target.value)" 
+                                class="form-control" >
+                                  
+                                  <option *ngFor="let make of makes" value={{make.value}}>{{make.text}}</option>
+                                </select>
+                                </div>
+                                
+                                
+                            
+                                <div class="select-field invalid">
                                 <label for='name'>Vehicle Model</label>
-                                <input type="text" class="form-control" id="model"
-                                required
-                                [(ngModel)]="model3.model" name="model">
-                    
+                                <select id = "mod" name="mod" 
+                                ng-model="myInput" required  
+                                [(ngModel)]="model3.mod" class="form-control" >
+                                    
+                                        <option *ngFor="let vehicle of vehicles" value={{vehicle.value}}>{{vehicle.text}}</option>
+                                </select>
+                                </div>
+                                
+                                
+                            
                                 <label for='name'>License Plate</label>
-                                <input type="text" class="form-control" id="license"
-                                required
-                                [(ngModel)]="model3.license" name="license">
-                    
+                                <input type="text"  class="form-control" id="license"
+                                ng-model="myInput" required 
+                                [(ngModel)]="model3.license" name="license" >
+                               
+
+                                
+                           
                                 <label for='name'>Max passengers</label>
-                                <input type="text" class="form-control" id="passengers"
-                                required
-                                [(ngModel)]="model3.passengers" name="passengers">
+                                <input type="number"  class="form-control" id="passengers"
+                                ng-model="myInput" required 
+                                [(ngModel)]="model3.passengers" name="passengers" >
+                                   
                     
+                                ​
+                            
                                 <label for='name'>Manufacture Year</label>
                                 <input type="date" class="form-control" id="year"
-                                required
-                                [(ngModel)]="model3.year" name="year">
+                                ng-model="myInput" required 
+                                [(ngModel)]="model3.year" name="year" >
+                                   
+                               
 
+                                   
                                 <label for='name'>Vehicle Colour</label>
-                                <input type="text" class="form-control" id="colour"
-                                required
-                                [(ngModel)]="model3.colour" name="colour">
+                                <input type="text"  class="form-control" id="colour"
+                                ng-model="myInput" required 
+                                [(ngModel)]="model3.colour" name="colour" >
+                                             
+
                                 <br>
-                            <button (click)="method3()" (click)="onclick()" type="submit" class="btn btn-success">Update</button>
+                            <button (click)="method3()" (click)="sweetAlertUpdate()" type="submit" id="btnAdd" class="btn btn-success"  >Update</button>
                     
                         </form>
+                       
+        
                     </div>
         </div>
     </div>

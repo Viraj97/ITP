@@ -10,10 +10,15 @@
                         <h1>Delete vehicle</h1>
                         <form #newCustomer=ngForm>
 
+                        <div class="form-group" [class.has-error]="id.invalid && id.touched">
                             <label for='name'>Vehicle ID</label>
-                            <input type="text" class="form-control" id="id" required [(ngModel)]="model2.id" name="id">
+                            <input type="text" class="form-control" id="id" required #id="ngModel"
+                            [(ngModel)]="model2.id" name="id" onchange="validatedelete();">
+                            <span class="help-block"
+                                *ngIf="id.invalid && id.touched">Vehicle id is required</span>
+                        </div>    
         <br>
-                            <button type="submit" class="btn btn-success" (click)="method2()" >Delete</button>
+                            <button type="submit" class="btn btn-success" (click)="method2()" (click)="sweetAlertDelete()" id="btnDEL" >Delete</button>
 
                             
         

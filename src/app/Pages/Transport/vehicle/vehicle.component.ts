@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+import Swal from 'sweetalert2';
+
 declare const validate:any;
 @Component({
   selector: 'app-vehicle',
@@ -15,7 +17,7 @@ export class VehicleComponent{
   model = {
     id: '',
     vehicle: '',
-    model: '',
+    mod: '',
     license: '',
     passengers: '',
     year: '',
@@ -33,7 +35,7 @@ export class VehicleComponent{
 
 method1(){
   this.http.get('http://127.0.0.1:3000/AddVehicle',{
-    params: {VehicleID:this.model.id,Vehicle:this.model.vehicle,VehicleModel:this.model.model,Licence:this.model.license,Max:this.model.passengers,
+    params: {VehicleID:this.model.id,Vehicle:this.model.vehicle,VehicleModel:this.model.mod,Licence:this.model.license,Max:this.model.passengers,
       Year:this.model.year,Colour:this.model.colour}
   }).subscribe((response)=>{
     console.log('response',response[0].AddVehicle);
@@ -54,6 +56,16 @@ getModels(){
   }).subscribe(response=>{
     this.makes = response;
   })
+}
+
+sweetAlertAdd1(){
+Swal.fire({
+  position:'center',
+  type:'success',
+  title:'Vehicle details added successfuly',
+  showConfirmButton:false,
+  timer:1500
+})
 }
 
 onclick(){
