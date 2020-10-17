@@ -1,0 +1,73 @@
+<!--p>update-emp-details works!</p-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-employee-sidebar></app-employee-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                
+                <form #newCustomer=ngForm style="width: 800px">
+                    <h1>Update Employee</h1>
+                    <label for='name'>Employee ID</label>
+                    <input type="text" class="form-control" id="Eid" required [(ngModel)]="model.id" name="EempId">
+
+                    <br>
+                    <button (click)=" method3()"  (click)=" onClickE()"type="submit" class="btn btn-success">Edit</button>
+
+                </form>
+                <form #newCustomer=ngForm style="width: 800px">
+                    <label for='name'>Employee ID</label>
+                    <input type="text" class="form-control" id="UempId" required [(ngModel)]="model.name" name="Uid" value="user.id">
+
+                    <label for='name'>Employee Name</label>
+                    <input type="text" class="form-control" id="UempName" required [(ngModel)]="model.address" name="Uname" value="user.name">
+
+                    <label for='name'>NIC or Passport</label>
+                    <input type="text" class="form-control" id="Unic" required [(ngModel)]="model.NIC" name="Unic" value="user.nic">
+
+                    <label for='name'>Age</label>
+                    <input type="text" class="form-control" id="UempAge" required [(ngModel)]="model.telephone" name="Uage" value="user.age">
+
+                    <label for='name'>Birth Date</label>
+                    <input type="date" class="form-control" id="UempBirth" required [(ngModel)]="model.email" name="UBdate" value="user.Bdate">
+
+                    <label for='name'>Mobile</label>
+                    <input type="text" class="form-control" id="UempMob" required [(ngModel)]="model.email" name="Umobile" value="user.mobile">
+
+                    <label for='name'>Joined Date</label>
+                    <input type="date" class="form-control" id="UempJd" required [(ngModel)]="model.email" name="UJdate" value="user.Jdate">
+
+                    <label for='name'>Position</label>
+                    <input type="text" class="form-control" id="UempPos" required [(ngModel)]="model.email" name="UPosition" value="user.position">
+
+                    <label for='name'>Password</label>
+                    <input type="text" class="form-control" id="UempPass" required [(ngModel)]="model.email" name="UPassword" value="user.password">
+                    
+                    <label for='name'>Gender</label>
+                    <p>
+                        <input class="w3-radio" type="radio" name="gender" id="UgenderM" value="male" >
+                        <label>Male</label></p>
+                        <p>
+                        <input class="w3-radio" type="radio" name="gender" id="UgenderF" value="female">
+                        <label>Female</label></p>
+                        <p>
+                    
+                    <label for='name'>Married Status</label>
+                    <p>
+                        <input class="w3-radio" type="radio" name="marry" id="Upmarry" value="marry" >
+                        <label>Married</label></p>
+                        <p>
+                        <input class="w3-radio" type="radio" name="marry" id="UpUnmarry" value="Unmarry">
+                        <label>Unmarried</label></p>
+                        <p>        
+                    <br>
+                    <button (click)="onClickU()" type="submit" class="btn btn-success">Update</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

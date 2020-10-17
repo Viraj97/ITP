@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-maintanace-sidebar></app-maintanace-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                        <form #updatedailyshift=ngForm>
+                    <h1>Equipment Update Center</h1>
+                            
+                            <label for='name'>Equipment Id:</label>
+                            <input type="text" class="form-control" id="NIC"
+                            required
+                            [(ngModel)]="model.NIC" name="NIC">
+
+                
+    
+                            <label for='name'>Date:</label>
+                            <input type="date" class="form-control" id="date"
+                            required
+                            [(ngModel)]="model.date" name="date">
+
+
+
+                            <label for='name'>Quantity:</label>
+                            <input type="number" class="form-control" id="quantity"
+                            required
+                            [(ngModel)]="model.quantity" name="quantity">
+
+
+
+                            <label for='name'>Price:</label>
+                            <input type="text" class="form-control" id="price"
+                            required
+                            [(ngModel)]="model.price" name="price">
+     
+
+                                <br>
+                            <button type="submit" (click)="onClickUpdateEquipment()"class="btn btn-success">Submit</button>
+</form>
+                    </div>
+
+
+    

@@ -1,0 +1,19 @@
+<div class="page">
+	<div class="login">
+		<form action="/action_page.php">
+			<div class="imgcontainer">
+				<img src="./../../../../assets/images/logo.png" alt="Avatar" class="avatar">
+			</div>
+
+			<div class="container">
+				<label for="uname"><b>Username</b></label><br>
+				<input type="text" placeholder="Enter Username" required [(ngModel)]="model.uName" name="Username" required>
+
+				<label for="psw"><b>Password</b></label><br>
+				<input type="password" placeholder="Enter Password" [(ngModel)]="model.pw" name="password" required>
+
+				<button type="submit" (click)="method1()">Login</button>
+			</div>
+		</form>
+	</div>
+</div>
